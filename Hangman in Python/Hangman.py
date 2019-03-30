@@ -51,14 +51,15 @@ while True:
 
     #check if player won yet (are there any _ left inside of 'known'?)
     if (''.join(L) == secret_word):
-        print("\n Known:" + str(L)+ "      Guessed:" + str(guessed))
-        print("Chances" + chances)
+        #print 'known' list
+        #print 'guessed' list
         #congrats message 
         break
 
     elif ( ''.join(L) != secret_word and (chances ==0)):
         updateGame(chances)
-        print("\n Known:" + str(L)+ "      Guessed:" + str(guessed))
+        #print 'known' list
+        #print 'guessed' list
         #lost message 
         break
     
