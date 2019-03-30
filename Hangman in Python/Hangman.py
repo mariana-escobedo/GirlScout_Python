@@ -7,19 +7,13 @@ from stickman import updateGame, replaceLetters, gameState
 ### You will need to start adding your variables here.
 ### Here is a list of the variables you will need to get your game started! :)
 ### HINT: Refer to your cheat sheet for help!
-### 
+
+chances = 5
+L = ["_" for i in range(0, len(secret_word))]
 ### secret_word  (string)
 ### guessed (list)
-###chances = 5
-### wrongs (int)
 ### guess (string)
 
-secret_word = "food"
-chances = 5
-guessed = []
-wrongs = 0
-guess = "" 
-L = ["_" for i in range(0, len(secret_word))]
 
 ##GAME START!
 print("★ Welcome to Hangman! ★ \n﻿")
