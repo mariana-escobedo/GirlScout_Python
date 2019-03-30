@@ -33,7 +33,7 @@ while True:
         #-> print your 'known' array
         #-> print your 'guessed' variable
     updateGame(chances)
-    print("\n Known:" + str(L)+ "      Guessed:" + str(guessed))
+    
     
     #Get their one letter guess (hint: input)
     inp = input("\n >> ")
@@ -41,23 +41,18 @@ while True:
 
 ###PART 3: If Statements and Conditions
     #check IF the player already guessed that letter
-    if inp in guessed:
+    
         #if they did: print out a statement telling them
-        print("You already guessed that... ")
-    else:
-        #if they didn't: update the gussed list by adding their guess to it.
-        guessed.append(inp)
         
-    #then check if they guessed it right or wrong.
+    
+    #IF they didn't: update the guessed list by adding their guess to it.(HINT: .append() )
+        
+        
+    #then check if they guessed it right or wrong. (Is the user input inside the secret_key?)
         #if RIGHT => update the secret word list
-    if inp in secret_word:
-        n = secret_word.index(inp)
-        L[n]= inp            
-
-        #if WRONG => bump their wrongs variable up by 1 point
-    else:
-        print("Wrong...")   
-        chances -= 1
+    
+        #if WRONG => bump their chances variable down by 1 point
+    
             
 
     #check if player won yet (are there any _ left inside of 'known'?)
@@ -70,7 +65,7 @@ while True:
     elif ( ''.join(L) != secret_word and (chances ==0)):
         updateGame(chances)
         print("\n Known:" + str(L)+ "      Guessed:" + str(guessed))
-        print("lost")
+        #lost message 
         break
     
     else:
